@@ -1,150 +1,157 @@
-import { Box, Button, Container, Heading, Input, ModalBody, ModalFooter, ModalHeader, Text, useDisclosure, useToast, VStack } from "@chakra-ui/react"
+import { Box, Button, Heading, Text, useDisclosure, VStack, IconButton } from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { auth } from '../firebase'
-import { useRouter } from "next/router"
-
-
-import {
-    Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-} from '@chakra-ui/react'
-import { useEffect, useState, useRef } from "react"
-import LoginModal from "./LoginModal"
-import { onAuthStateChanged, signOut } from "firebase/auth"
 import Link from "next/link"
-
-
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerFooter, DrawerCloseButton } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { useRef } from 'react'
 
 const Navbar: React.FC = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const { isOpen: isOpenmodal, onOpen: onOpenmodal, onClose: onClosemodal } = useDisclosure()
     const btnRef = useRef<HTMLButtonElement>(null)
     const router = useRouter()
-    const [user, setUser] = useState<boolean>(false)
-    useEffect(() => {
-        console.log("hello???")
-        // setUser(!!auth.currentUser)
-        console.log("current user: ", user)
 
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-              // User is signed in, see docs for a list of available properties
-              // https://firebase.google.com/docs/reference/js/firebase.User
-              setUser(true)
-              // ...
-            } else {
-              // User is signed out
-              // ...
-              setUser(false)
-            }
-          });
-    },[])
-
-
-      
-
-    // function onSigninSubmit() {
-    //     const phoneNumber = "+91" + number;
-    //     const appVerifier = window.recaptchaVerifier;
-    //     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
-    //         .then((confirmationResult) => {
-    //             // SMS sent. Prompt user to type the code f
-                
-    //             rom the message, then sign the
-    //             // user in with confirmationResult.confirm(code).
-    //             window.confirmationResult = confirmationResult;
-    //             alert("otp sended")
-    //             // ...
-    //         }).catch((error) => {
-    //             // Error; SMS not sent
-
-    //         });
-    // }
-
-
-    // function verifyotp() {
-    //     window.confirmationResult.confirm(otp).then((result) => {
-    //         // User signed in successfully.
-    //         const user = result.user;
-    //         // ...
-    //     }).catch((error) => {
-    //         // User couldn't sign in (bad verification code?)
-    //         // ...
-    //     });
-
-    // }
-
-    const handleCommunity = ()=>{
-            router.push('/community')
+    const handleCommunity = () => {
+        router.push('/community')
     }
-
-    const handleSignout = () => {
-        signOut(auth).then(() => {
-            console.log("logout done")
-        }).catch(() => {
-            console.log("error in logout")
-        })
-
-    }
+    const handleHome = () => {
+        router.push('/') // Goes to landing page
+      }
+    
+      const handleDashboard = () => {
+        router.push('/dashboard') // Goes to map/dashboard
+      }
 
     return (
         <>
-
-            <Box px={6} py={2}  zIndex="docked" rounded={"2xl"} alignItems="centepr" w="96"  bg={"blackAlpha.800"}
-             display="flex"  shadow="2xl"  position="fixed" left="2" top="5" placeItems={"center"} justifyContent={"space-between"} >
-                <Box  >
-                    <a><Link href={"/"} >
-                        <Heading fontSize={"20px"} color="white" >S.H.I.E.L.D</Heading></Link></a>
-                        
-                    </Box>
-                <Button bg="whiteAlpha.800" onClick={onOpen} ref={btnRef} display={"flex"}>
-                    <HamburgerIcon h={7} w={7} />
-                </Button>
-
+            {/* Main Navbar */}
+            <Box 
+                px={8} 
+                py={4} 
+                zIndex={1000}
+                w="full"
+                bg="rgba(0, 0, 0, 0.8)"
+                backdropFilter="blur(10px)"
+                display="flex"
+                position="fixed"
+                top={0}
+                left={0}
+                alignItems="center"
+                justifyContent="space-between"
+                borderBottom="1px solid"
+                borderColor="whiteAlpha.200"
+            >
+                <Box>
+                    <Link href="/" passHref>
+                        <Heading 
+                            as="a"
+                            fontSize="24px" 
+                            color="white"
+                            bgGradient="linear(to-r, teal.500, blue.500)"
+                            bgClip="text"
+                            _hover={{ 
+                                transform: "scale(1.05)",
+                                transition: "all 0.3s ease"
+                            }}
+                            cursor="pointer"
+                        >
+                            मार्गdarshak
+                        </Heading>
+                    </Link>
+                </Box>
+                <IconButton
+                    aria-label="Menu"
+                    icon={<HamburgerIcon />}
+                    onClick={onOpen}
+                    ref={btnRef}
+                    variant="ghost"
+                    color="white"
+                    _hover={{ bg: "whiteAlpha.200" }}
+                    size="lg"
+                />
             </Box>
+
+            {/* Drawer */}
             <Drawer
                 isOpen={isOpen}
                 placement='right'
                 onClose={onClose}
                 finalFocusRef={btnRef}
-                
             >
                 <DrawerOverlay />
-                <DrawerContent bg="whiteAlpha.800" >
-                    <DrawerCloseButton />
-                    <DrawerHeader>S.H.I.E.L.D</DrawerHeader>
+                <DrawerContent 
+                    bg="rgba(0, 0, 0, 0.95)"
+                    color="white"
+                >
+                    <DrawerCloseButton 
+                        color="white"
+                        size="lg"
+                        _hover={{ bg: "whiteAlpha.200" }}
+                    />
+                    <DrawerHeader
+                        borderBottom="1px solid"
+                        borderColor="whiteAlpha.200"
+                    >
+                        <Heading
+                            bgGradient="linear(to-r, teal.500, blue.500)"
+                            bgClip="text"
+                            fontSize="2xl"
+                        >
+                            मार्गdarshak
+                        </Heading>
+                    </DrawerHeader>
 
                     <DrawerBody>
-                        <VStack w="full" >
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push('/')}>Home</Text></Box>
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push("/profile")}>Profile</Text></Box>
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push("/Sos")}>Save our souls (SoS)</Text></Box>
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push('/reportIncident')}>Report Incident</Text></Box>
-                            <Box w="full" p={2} onClick={handleCommunity}><Text fontSize={"18px"}>Community</Text></Box>
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push('/safespot')}>Explore Safe spot</Text></Box>
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push('/donations')}>Donation</Text></Box>
-                            <Box w="full" p={2}><Text fontSize={"18px"} onClick={()=>router.push('/announcement')}>Important Announcements</Text></Box>
-                            
+                        <VStack w="full" spacing={4} mt={4}>
+                            {[
+                                { text: "Home", path: "/" },
+                                { text: "Profile", path: "/profile" },
+                                { text: "ApdaMitra", path: "/Sos" },
+                                { text: "Report Incident", path: "/reportIncident" },
+                                { text: "Community", onClick: handleCommunity },
+                                { text: "Explore Safe spot", path: "/safespot" },
+                                
+                                { text: "Ready to Help", path: "/announcement" }
+                            ].map((item, index) => (
+                                <Box
+                                    key={index}
+                                    w="full"
+                                    p={4}
+                                    cursor="pointer"
+                                    borderRadius="md"
+                                    transition="all 0.3s ease"
+                                    _hover={{
+                                        bg: "whiteAlpha.200",
+                                        transform: "translateX(10px)"
+                                    }}
+                                    onClick={() => item.onClick ? item.onClick() : router.push(item.path)}
+                                >
+                                    <Text fontSize="18px">{item.text}</Text>
+                                </Box>
+                            ))}
                         </VStack>
                     </DrawerBody>
-                    {/* home ,profile , community ,explore safe spot , donation, redeem */}
-                    <DrawerFooter>
-                        {
-                            !user ? 
-                            <Button onClick={onOpenmodal} bg="blackAlpha.800" color={"white"} w="full" fontSize={"18px"}> Login</Button>
-                            :
-                            <Button onClick={handleSignout} bg="blackAlpha.800" color={"white"} w="full" fontSize={"18px"}> Logout</Button>
-                        }
+
+                    <DrawerFooter
+                        borderTop="1px solid"
+                        borderColor="whiteAlpha.200"
+                    >
+                        <Button 
+                            w="full"
+                            bgGradient="linear(to-r, teal.500, blue.500)"
+                            color="white"
+                            _hover={{
+                                bgGradient: "linear(to-r, teal.600, blue.600)",
+                                transform: "translateY(-2px)"
+                            }}
+                            transition="all 0.3s ease"
+                            fontSize="18px"
+                            onClick={() => router.push('/')}
+                        >
+                            Home
+                        </Button>
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>
-
-            <LoginModal isOpen={isOpenmodal} onClose={onClosemodal} onOpen={onOpenmodal} />
         </>
     )
 }

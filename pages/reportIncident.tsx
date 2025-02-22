@@ -1,18 +1,21 @@
 import type { NextPage } from 'next'
 import Navbar from '../components/Navbar'
-import { Box, Button, Img, Input, Select, Textarea, VStack, useToast, useDisclosure, Text, Heading } from '@chakra-ui/react'
-import {
+import { 
+    Box, 
+    Button, 
+    Image, 
+    Input, 
+    Select, 
+    Textarea, 
+    VStack, 
+    useToast, 
+    useDisclosure, 
+    Text, 
+    Heading,
+    Container,
     FormControl,
     FormLabel,
-    FormErrorMessage,
     FormHelperText,
-} from '@chakra-ui/react'
-import React, { ChangeEventHandler, useEffect, useRef, useState } from 'react'
-import { v4 } from 'uuid'
-import { getDownloadURL, ref, uploadBytes } from '@firebase/storage'
-import { auth, firestore, storage } from '../firebase'
-import { addDoc, collection, query, where, getDocs, doc, getDoc, updateDoc } from '@firebase/firestore'
-import {
     Modal,
     ModalOverlay,
     ModalContent,
@@ -21,78 +24,107 @@ import {
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react'
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react'
+import { v4 } from 'uuid'
+import { getDownloadURL, ref, uploadBytes } from '@firebase/storage'
+import { auth, firestore, storage } from '../firebase'
+import { addDoc, collection, query, where, getDocs, doc, getDoc, updateDoc } from '@firebase/firestore'
 import { useRouter } from 'next/router'
 import LoginModal from '../components/LoginModal'
 import { onAuthStateChanged } from '@firebase/auth'
 
+interface GeoLocation {
+    latitude: number;
+    longitude: number;
+}
 
 const ReportIncident: NextPage = () => {
     const { isOpen: isOpenmodal, onOpen: onOpenmodal, onClose: onClosemodal } = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const finalRef = useRef(null)
+    const toast = useToast()
+    const router = useRouter()
 
+    // State management
+    const [imgurl, setImgurl] = useState<string>("")
+    const [loading, setLoading] = useState<boolean>(false)
+    const [submitloading, setSubmitloading] = useState<boolean>(false)
+    const [type, setType] = useState<string>("")
+    const [description, setDescription] = useState<string>("")
+    const [geoLocation, setGeoLocation] = useState<GeoLocation | null>(null)
+    const hiddenFileInput = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
+        // Check authentication status
         onAuthStateChanged(auth, (user) => {
             if (!user) {
                 onOpenmodal()
             }
-        });
+        })
+
+        // Get geolocation
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                setGeoLocation({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
+                })
+            },
+            (error) => {
+                console.error("Error getting location:", error)
+                toast({
+                    title: "Location Error",
+                    description: "Unable to get your location. Please enable location services.",
+                    status: "error",
+                    duration: 5000,
+                    isClosable: true,
+                })
+            }
+        )
     }, [])
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const finalRef = React.useRef(null)
-
-    const toast = useToast()
-    const [imgurl, setimgurl] = useState("")
-    const [disp, setdisp] = useState("none")
-    const [loading, setLoading] = useState(false)
-    const hiddenFileInput = useRef<HTMLInputElement>(null)
-    const [submitloading, setsubmitloading] = useState(false)
     const handleClick = () => {
-        if(hiddenFileInput.current !== null) hiddenFileInput.current.click();
+        hiddenFileInput.current?.click()
     }
-    const [type, settype] = useState("")
-    const [description, setdescription] = useState("")
 
-    const router = useRouter()
-
-    const [geoLocation, setGeoLocation] = useState<any>([])
-
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            console.log("Latitude is :", position.coords.latitude);
-            console.log("Longitude is :", position.coords.longitude);
-            setGeoLocation([position.coords.latitude, position.coords.longitude])
-            console.log("geoLocation: ", geoLocation)
-        });
-    }, [])
-
-
-
-    const handleChange:ChangeEventHandler<HTMLInputElement> | undefined = async (event) => {
-        if(event.target.files) {
-        setLoading(true)
-        const fileUploaded = event.target.files[0];
-        try {
-            const imgname = fileUploaded.name + v4()
-            const imageref = ref(storage, `reportimages/${imgname}`)
-            await uploadBytes(imageref, fileUploaded)
-            const link = await getDownloadURL(imageref)
-            setimgurl(link)
-            setdisp("block")
-        } catch (err) {
-            console.log(err)
+    const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
+        const files = event.target.files
+        if (files && files.length > 0) {
+            setLoading(true)
+            const fileUploaded = files[0]
+            try {
+                const imgname = fileUploaded.name + v4()
+                const imageref = ref(storage, `reportimages/${imgname}`)
+                await uploadBytes(imageref, fileUploaded)
+                const link = await getDownloadURL(imageref)
+                setImgurl(link)
+                toast({
+                    title: "Image uploaded successfully",
+                    status: "success",
+                    duration: 3000,
+                    isClosable: true,
+                })
+            } catch (err) {
+                console.error(err)
+                toast({
+                    title: "Error uploading image",
+                    description: "Please try again",
+                    status: "error",
+                    duration: 3000,
+                    isClosable: true,
+                })
+            } finally {
+                setLoading(false)
+            }
         }
-        setLoading(false)
     }
-    }
-
     const submithandler = async () => {
         if (!auth.currentUser) {
             toast({
-                title: "Sign in to continue",
-                description: "You must sign in to get your rewards for reporting",
+                title: "Sign in required",
+                description: "Please sign in to report an incident",
                 status: 'error',
-                duration: 6000,
+                duration: 5000,
                 isClosable: true,
             })
             onOpenmodal()
@@ -101,133 +133,66 @@ const ReportIncident: NextPage = () => {
 
         if (!type || !description) {
             toast({
-                title: 'Error',
-                description: "Description and type is necessary",
+                title: 'Missing information',
+                description: "Please provide incident type and description",
                 status: 'error',
-                duration: 6000,
+                duration: 5000,
                 isClosable: true,
             })
             return
         }
-        setsubmitloading(true)
-        const dbRef = collection(firestore, "reportincident");
-        const data = {
-            type: type,
-            description: description,
-            imgurl: imgurl,
-            latitude: geoLocation[0] as number,
-            longitude: geoLocation[1] as number
-        };
-        await addDoc(dbRef, data)
-            .then(docRef => {
-                setsubmitloading(false)
-                onOpen()
-            })
-            .catch(error => {
-                console.log(error);
-                setsubmitloading(false)
-            })
-        console.log("report added in database")
 
-        // credits assign
-        const uid = auth.currentUser.uid
-        const docRef = doc(firestore, "users", uid);
-        const docSnap =  (await getDoc(docRef)).data();
-        let dataobj = {}
-        if (docSnap && docSnap["credits"]) {
-            dataobj = {
-                credits: docSnap.data()["credits"] + 5
-            }
-        }
-        else {
-            dataobj = {
-                credits: 5
-            }
+        if (!geoLocation) {
+            toast({
+                title: 'Location required',
+                description: "Please enable location services",
+                status: 'error',
+                duration: 5000,
+                isClosable: true,
+            })
+            return
         }
 
-        updateDoc(docRef, dataobj)
-            .then(docRef => {
-                console.log("done")
-            })
-            .catch(error => {
-                console.log(error);
-            })
-
-        console.log("credits assigned")
-
-        const usersRef = collection(firestore, "users")
-        const lowerLatitude = await getDocs(query(usersRef, where("latitude", '>', geoLocation[0] - 0.02)))
-        const upperLatitude = await getDocs(query(usersRef, where("latitude", '<', geoLocation[0] + 0.02)))
-        const lowerLongitude = await getDocs(query(usersRef, where("latitude", '>', geoLocation[1] - 0.02)))
-        const upperLongitude = await getDocs(query(usersRef, where("latitude", '<', geoLocation[1] + 0.02)))
-        // console.log("lower latitude, ",lowerLatitude )
-        // console.log("upper latitude, ", upperLatitude)
-        console.log("users queried")
-        const usersData = new Set()
-        lowerLatitude.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-            usersData.add({
-                id: doc.id,
-                ...doc.data()
-            })
-        });
-        upperLatitude.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-            usersData.add({
-                id: doc.id,
-                ...doc.data()
-            })
-        });
-        lowerLongitude.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-            usersData.add({
-                id: doc.id,
-                ...doc.data()
-            })
-        });
-        upperLongitude.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-            usersData.add({
-                id: doc.id,
-                ...doc.data()
-            })
-        });
-        const phoneList = new Set()
-        usersData.forEach((p: any) => {
-            phoneList.add(p.number)
-            if (p.number1) phoneList.add(p.number1)
-            if (p.number2) phoneList.add(p.number2)
-            if (p.number3) phoneList.add(p.number3)
-        })
-        phoneList.forEach(p => {
-            if (p == auth.currentUser!.phoneNumber) {
-                usersData.delete(p)
+        try {
+            setSubmitloading(true)
+            
+            // Add incident report
+            const reportData = {
+                type,
+                description,
+                imgurl,
+                latitude: geoLocation.latitude,
+                longitude: geoLocation.longitude,
+                timestamp: new Date(),
+                reportedBy: auth.currentUser.uid
             }
-        })
 
-        console.log("phone number list ready: ", phoneList)
-        phoneList.forEach(async p => {
-            await addDoc(collection(firestore, "alertUsers"), {
-                to: p,
-                body:
-                    `ALERT! ALERT!! ALERT!!!
-                ${type}
-                ${description}
-                ${auth.currentUser?.displayName ? `Reported By: ${auth.currentUser.displayName} ` : ""}
+            await addDoc(collection(firestore, "reportincident"), reportData)
 
-                SENT BY SHIELD, CO
-                Here for you, always.
-                Be safe & take care 
-                `,
-                from: "+1 574 347 4780"
+            // Update user credits
+            const userRef = doc(firestore, "users", auth.currentUser.uid)
+            const userDoc = await getDoc(userRef)
+            const currentCredits = userDoc.exists() ? (userDoc.data()?.credits || 0) : 0
+            
+            await updateDoc(userRef, {
+                credits: currentCredits + 5
             })
-        })
-        console.log("all sms have been sent")
-        setsubmitloading(false)
+
+            // Show success modal
+            onOpen()
+            
+        } catch (error) {
+            console.error("Error submitting report:", error)
+            toast({
+                title: "Error submitting report",
+                description: "Please try again",
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+            })
+        } finally {
+            setSubmitloading(false)
+        }
     }
 
     const handleClose = () => {
@@ -235,75 +200,137 @@ const ReportIncident: NextPage = () => {
         onClose()
     }
 
-
     return (
-        <Box>
+        <Box minH="100vh" bg="gray.50">
             <LoginModal isOpen={isOpenmodal} onClose={onClosemodal} onOpen={onOpenmodal} />
-
             <Navbar />
-            <Box mt={"20vw"} p={"4"}>
-                <Text as="b" mt={"4vw"} display={"block"} fontSize={"3xl"}>Report Incident</Text>
-                <VStack mt={"2vh"}>
-                    <FormControl w="90%">
-                        <FormLabel>Select type</FormLabel>
-                        <Select onChange={(e) => settype(e.target.value)} placeholder='Select option'>
-                            <option value='Fire'>Fire</option>
-                            <option value='Accident'>Accident</option>
-                            <option value='Medical Emergency'>Medical Emergency</option>
-                            <option value='Crime'>Crime</option>
-                        </Select>
-                    </FormControl>
+            
+            <Container maxW="container.md" py={10}>
+                <Box 
+                    bg="white" 
+                    p={8} 
+                    borderRadius="xl" 
+                    boxShadow="lg"
+                    mt="20"
+                >
+                    <Heading 
+                        size="lg" 
+                        mb={8}
+                        color="blue.700"
+                        textAlign="center"
+                    >
+                        Report an Incident
+                    </Heading>
 
-                    <FormControl w="90%">
-                        <FormLabel>Description</FormLabel>
-                        <Textarea
-                            placeholder='Enter description'
-                            size='sm'
-                            resize={"none"}
-                            onChange={(e) => setdescription(e.target.value)}
-                        />
-                    </FormControl>
+                    <VStack spacing={6}>
+                        <FormControl isRequired>
+                            <FormLabel>Incident Type</FormLabel>
+                            <Select
+                                value={type}
+                                onChange={(e) => setType(e.target.value)}
+                                placeholder='Select type of incident'
+                                size="lg"
+                            >
+                                <option value='Fire'>Fire Emergency</option>
+                                <option value='Accident'>Accident</option>
+                                <option value='Medical Emergency'>Medical Emergency</option>
+                                <option value='Crime'>Crime</option>
+                            </Select>
+                        </FormControl>
 
-                    <FormControl w="90%" >
-                        <FormLabel>Select Image (optional):</FormLabel>
-                        <Button isLoading={loading} w="full" _hover={{ bg: "green" }} onClick={handleClick} bg="green" mt="2vh" textColor={"white"} cursor="pointer" borderRadius={"10px"} fontSize={"16px"} textAlign={"center"} >
-                            Upload Images
-                            <Input onChange={handleChange} ref={hiddenFileInput} display={"none"} id="inp" type="file" />
+                        <FormControl isRequired>
+                            <FormLabel>Description</FormLabel>
+                            <Textarea
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                placeholder='Please describe the incident in detail'
+                                size='lg'
+                                rows={5}
+                            />
+                            <FormHelperText>
+                                Provide as much detail as possible
+                            </FormHelperText>
+                        </FormControl>
+
+                        <FormControl>
+                            <FormLabel>Evidence Image</FormLabel>
+                            <Button
+                                onClick={handleClick}
+                                isLoading={loading}
+                                loadingText="Uploading..."
+                                w="full"
+                                colorScheme="blue"
+                                variant="outline"
+                                size="lg"
+                            >
+                                Upload Image
+                                <Input 
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={handleChange}
+                                    ref={hiddenFileInput}
+                                    display="none"
+                                />
+                            </Button>
+                        </FormControl>
+
+                        {imgurl && (
+                            <Box w="full">
+                                <Image
+                                    src={imgurl}
+                                    alt="Incident image"
+                                    borderRadius="md"
+                                    maxH="300px"
+                                    mx="auto"
+                                />
+                            </Box>
+                        )}
+
+                        <Button
+                            onClick={submithandler}
+                            isLoading={submitloading}
+                            loadingText="Submitting..."
+                            colorScheme="blue"
+                            size="lg"
+                            w="full"
+                        >
+                            Submit Report
                         </Button>
-                    </FormControl>
+                    </VStack>
+                </Box>
+            </Container>
 
-                    <Box w="90%" h="30vh" p={2} display={disp}>
-                        <Img borderRadius={"10px"} h="full" w="full" src={imgurl} />
-                    </Box>
-
-                    <Box mt="2vh" w="90%">
-                        <Button isLoading={submitloading} onClick={submithandler} borderRadius={"10px"} w="full" bg="blue" textColor={"white"}>Submit Details</Button>
-                    </Box>
-
-                </VStack>
-            </Box>
-            <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpen} onClose={onClose} isCentered>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Report Submitted</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <Heading>You earn 5 credits</Heading>
-                        <Text>Your report is submitted , thank you for reporting. We will take an imediate action on this problem and you will receive reward for your work in near future!</Text>
+                    <ModalHeader bg="green.500" color="white">
+                        Report Submitted Successfully
+                    </ModalHeader>
+                    <ModalCloseButton color="white" />
+                    <ModalBody py={6}>
+                        <VStack spacing={4}>
+                            <Heading size="md" color="green.500">
+                                You earned 5 credits!
+                            </Heading>
+                            <Text align="center">
+                                Thank you for helping keep our community safe.
+                                Your report has been submitted successfully.
+                            </Text>
+                        </VStack>
                     </ModalBody>
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={handleClose}>
-                            Okay
+                        <Button 
+                            colorScheme="green" 
+                            w="full"
+                            onClick={handleClose}
+                        >
+                            Return to Home
                         </Button>
-
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-
         </Box>
-
     )
-
-
 }
+
 export default ReportIncident

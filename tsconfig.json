@@ -17,6 +17,6 @@
     "typeRoots": ["./types"]
 
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/AIChat.jsx"],
   "exclude": ["node_modules"]
 }

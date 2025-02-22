@@ -1,22 +1,41 @@
-import type { NextPage } from 'next'
-import { Box, Button, HStack, Input, Select, Text, useDisclosure, useToast, VStack } from '@chakra-ui/react'
-import Navbar from '../components/Navbar'
+import type { NextPage } from 'next';
+import Navbar from '../components/Navbar';
 import {
-    FormControl,
-    FormLabel,
-    FormErrorMessage,
-    FormHelperText,
-} from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
-import { auth, firestore } from '../firebase'
-import { doc, updateDoc, getDoc } from '@firebase/firestore'
-import LoginModal from '../components/LoginModal'
-import { onAuthStateChanged } from 'firebase/auth'
+  Box,
+  Button,
+  HStack,
+  Input,
+  Select,
+  Text,
+  useDisclosure,
+  useToast,
+  VStack,
+  Container,
+  Flex,
+  Avatar,
+  Badge,
+  SimpleGrid,
+  Icon,
+  Divider,
+  Card,
+  CardBody,
+  Progress,
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+} from '@chakra-ui/react';
+import { FormControl, FormLabel } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+import { auth, firestore } from '../firebase';
+import { doc, updateDoc, getDoc } from '@firebase/firestore';
+import LoginModal from '../components/LoginModal';
+import { onAuthStateChanged } from 'firebase/auth';
+import { FaMedal, FaStar, FaTrophy, FaUserShield } from 'react-icons/fa';
 
-// name , age , gender ,  3 contacts
 const Home: NextPage = () => {
-
-    const [name, setname] = useState<string>()
+  // ... existing state and functions ...
+const [name, setname] = useState<string>()
     const [age, setage] = useState<number>()
     const [gender, setgender] = useState<string>()
     const [number1, setnumber1] = useState<string>()
@@ -118,52 +137,179 @@ const Home: NextPage = () => {
         setloading(false)
     }
 
-    return (
-        <Box>
-            <LoginModal isOpen={isOpenmodal} onClose={onClosemodal} onOpen={onOpenmodal} />
+  // Hardcoded badges data
+  const badges = [
+    { id: 1, name: "First Responder", icon: FaUserShield, color: "red.500", description: "Helped in 5 emergencies" },
+    { id: 2, name: "Community Hero", icon: FaTrophy, color: "yellow.500", description: "Top contributor" },
+    { id: 3, name: "Safety Expert", icon: FaMedal, color: "blue.500", description: "Completed safety training" },
+    { id: 4, name: "Guardian Angel", icon: FaStar, color: "purple.500", description: "Saved a life" },
+  ];
 
-            <Navbar />
-            <Box mt={"10vh"} p={"4"}>
-            <Text as="b" mb={"2vw"} mt={"4vw"} display={"block"} fontSize={"3xl"}>Profile</Text>
-                
-                <VStack spacing={"2.5vh"}>
-                    <FormControl>
-                        <FormLabel>Name:</FormLabel>
-                        <Input value={name} p={"20px"} onChange={(e) => setname(e.target.value)} placeholder='Enter name' type='text' />
-                    </FormControl>
-                    <HStack>
-                        <FormControl>
-                            <FormLabel>Age:</FormLabel>
-                            <Input value={age} p="10px" onChange={(e) => setage(e.target.value as unknown as number)} placeholder='enter age' type='number' />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Gender:</FormLabel>
-                            <Select value={gender} onChange={(e) => setgender(e.target.value)} placeholder='Select option'>
-                                <option value='male'>Male</option>
-                                <option value='female'>Female</option>
-                            </Select>
-                        </FormControl>
-                    </HStack>
-                    <FormControl>
-                        <FormLabel>Emergency Contact 1:</FormLabel>
-                        <Input value={number1} p="20px" onChange={(e) => setnumber1(e.target.value  as unknown as string)} placeholder='enter first number' />
-                    </FormControl>
-                    <FormControl>
-                        <FormLabel>Emergency Contact 2:</FormLabel>
-                        <Input value={number2} p="20px" onChange={(e) => setnumber2(e.target.value  as unknown as string)} placeholder='enter second number' />
-                    </FormControl>
-                    <FormControl>
-                        <FormLabel>Emergency Contact 3:</FormLabel>
-                        <Input value={number3} p="20px" onChange={(e) => setnumber3(e.target.value  as unknown as string)} placeholder='enter third number' />
-                    </FormControl>
+  return (
+    <Box minH="100vh" bg="gray.50">
+      <LoginModal isOpen={isOpenmodal} onClose={onClosemodal} onOpen={onOpenmodal} />
+      <Navbar />
+      
+      <Container maxW="container.xl" py={8} mt="10vh">
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
+          {/* Left Column - Profile Info */}
+          <VStack spacing={6} align="stretch">
+            <Flex
+              bg="white"
+              p={6}
+              borderRadius="xl"
+              boxShadow="base"
+              direction="column"
+              align="center"
+            >
+              <Avatar
+                size="2xl"
+                name={name || "User"}
+                src={auth.currentUser?.photoURL || ""}
+                mb={4}
+              />
+              <Text fontSize="2xl" fontWeight="bold">{name || "Your Name"}</Text>
+              <HStack spacing={2} mt={2}>
+                <Badge colorScheme="green">Active</Badge>
+                <Badge colorScheme="blue">Verified</Badge>
+              </HStack>
+            </Flex>
+
+            {/* Credits and Level Section */}
+            <SimpleGrid columns={2} spacing={4}>
+              <Card>
+                <CardBody>
+                  <Stat>
+                    <StatLabel>Credits</StatLabel>
+                    <StatNumber>{credits || 0}</StatNumber>
+                    <StatHelpText>Safety Points</StatHelpText>
+                  </Stat>
+                  <Progress value={credits ? (credits % 100) : 0} colorScheme="green" mt={2} />
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                  <Stat>
+                    <StatLabel>Level</StatLabel>
+                    <StatNumber>{Math.floor((credits || 0) / 100) + 1}</StatNumber>
+                    <StatHelpText>Community Status</StatHelpText>
+                  </Stat>
+                  <Progress value={(credits || 0) % 100} colorScheme="blue" mt={2} />
+                </CardBody>
+              </Card>
+            </SimpleGrid>
+
+            {/* Badges Section */}
+            <Box bg="white" p={6} borderRadius="xl" boxShadow="base">
+              <Text fontSize="xl" fontWeight="bold" mb={4}>Achievements</Text>
+              <SimpleGrid columns={2} spacing={4}>
+                {badges.map((badge) => (
+                  <Flex
+                    key={badge.id}
+                    bg="gray.50"
+                    p={4}
+                    borderRadius="lg"
+                    align="center"
+                    gap={3}
+                  >
+                    <Icon as={badge.icon as React.ElementType} boxSize={8} color={badge.color} />
                     <Box>
-                        <Text fontWeight={"semibold"} fontSize="20px"> Your Credits : {credits ? credits + " credits" : "No Credits"}</Text>
+                      <Text fontWeight="bold">{badge.name}</Text>
+                      <Text fontSize="sm" color="gray.600">{badge.description}</Text>
                     </Box>
-                    <Button isLoading={loading} onClick={handleClick} bg="blackAlpha.800" w="95%" textColor="white">Update Details</Button>
-                </VStack>
+                  </Flex>
+                ))}
+              </SimpleGrid>
             </Box>
-        </Box>
-    )
-}
+          </VStack>
 
-export default Home
+          {/* Right Column - Form */}
+          <Box bg="white" p={6} borderRadius="xl" boxShadow="base">
+            <Text fontSize="2xl" fontWeight="bold" mb={6}>Personal Information</Text>
+            <VStack spacing={4}>
+              <FormControl>
+                <FormLabel fontWeight="medium">Name</FormLabel>
+                <Input
+                  value={name}
+                  onChange={(e) => setname(e.target.value)}
+                  placeholder="Enter name"
+                  size="lg"
+                  bg="gray.50"
+                  border="2px solid"
+                  borderColor="gray.200"
+                  _focus={{ borderColor: "blue.500", boxShadow: "none" }}
+                />
+              </FormControl>
+
+              <HStack w="full" spacing={4}>
+                <FormControl>
+                  <FormLabel fontWeight="medium">Age</FormLabel>
+                  <Input
+                    value={age}
+                    onChange={(e) => setage(e.target.value as unknown as number)}
+                    placeholder="Enter age"
+                    type="number"
+                    size="lg"
+                    bg="gray.50"
+                    border="2px solid"
+                    borderColor="gray.200"
+                  />
+                </FormControl>
+                <FormControl>
+                  <FormLabel fontWeight="medium">Gender</FormLabel>
+                  <Select
+                    value={gender}
+                    onChange={(e) => setgender(e.target.value)}
+                    placeholder="Select gender"
+                    size="lg"
+                    bg="gray.50"
+                    border="2px solid"
+                    borderColor="gray.200"
+                  >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </Select>
+                </FormControl>
+              </HStack>
+
+              <Divider my={2} />
+              <Text fontSize="xl" fontWeight="bold" alignSelf="start">Emergency Contacts</Text>
+
+              {[
+                { label: "Primary Contact", value: number1, setter: setnumber1 },
+                { label: "Secondary Contact", value: number2, setter: setnumber2 },
+                { label: "Tertiary Contact", value: number3, setter: setnumber3 },
+              ].map((contact, index) => (
+                <FormControl key={index}>
+                  <FormLabel fontWeight="medium">{contact.label}</FormLabel>
+                  <Input
+                    value={contact.value}
+                    onChange={(e) => contact.setter(e.target.value)}
+                    placeholder={`Enter contact number`}
+                    size="lg"
+                    bg="gray.50"
+                    border="2px solid"
+                    borderColor="gray.200"
+                  />
+                </FormControl>
+              ))}
+
+              <Button
+                isLoading={loading}
+                onClick={handleClick}
+                colorScheme="blue"
+                size="lg"
+                w="full"
+                mt={4}
+              >
+                Update Profile
+              </Button>
+            </VStack>
+          </Box>
+        </SimpleGrid>
+      </Container>
+    </Box>
+  );
+};
+
+export default Home;
