@@ -6,6 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import marker from '/public/MarkerIcons/community.png'
 import styles from './Map.module.css';
 
+
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
@@ -87,6 +88,7 @@ const Map:React.FC<IMap> = ({ children, className, ...rest }) => {
       });
     })();
   }, []);
+  
 
 
   return (

@@ -1,0 +1,1001 @@
+City,District,Taluka,Type of Crime,Frequency,Severity Value,Latitude,Longitude
+Mumbai,Mumbai City,Churchgate,Burglary,35,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,48,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Theft,16,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Robbery,33,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Murder,24,5,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Robbery,22,4,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Kidnapping,26,5,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Robbery,31,4,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Theft,26,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Assault,33,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,36,5,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Murder,32,5,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Theft,10,2,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Fraud,20,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Burglary,47,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Dadar,Theft,49,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Burglary,41,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Theft,14,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,9,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Fraud,46,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Burglary,33,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Murder,12,5,19.1197,72.8464
+Mumbai,Mumbai City,Marine Lines,Theft,28,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Theft,8,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Andheri,Theft,24,2,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Kidnapping,13,5,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Fraud,44,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Murder,33,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,33,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Robbery,31,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Fraud,36,2,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Fraud,33,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Robbery,15,4,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Kidnapping,32,5,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Murder,35,5,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Kidnapping,36,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Fraud,27,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Burglary,36,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Theft,17,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Murder,2,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Theft,13,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Burglary,35,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Bandra,Theft,49,2,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Murder,25,5,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Theft,23,2,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Burglary,16,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,39,3,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Kidnapping,1,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Robbery,8,4,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Theft,2,2,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Robbery,35,4,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Fraud,8,2,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Assault,24,3,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Kidnapping,17,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Robbery,40,4,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Fraud,32,2,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Kidnapping,31,5,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Theft,12,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Robbery,37,4,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Assault,27,3,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Fraud,30,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Murder,34,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,23,5,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Robbery,19,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Robbery,9,4,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Theft,2,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Assault,1,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Theft,26,2,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Kidnapping,7,5,18.9066,72.8103
+Mumbai,Mumbai City,Fort,Assault,27,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Murder,15,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Robbery,13,4,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Robbery,14,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Robbery,32,4,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Burglary,21,3,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Murder,27,5,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Murder,37,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,28,5,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Assault,1,3,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Theft,40,2,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Burglary,49,3,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Burglary,12,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Fraud,45,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Burglary,4,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Burglary,7,3,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Burglary,49,3,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Assault,28,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Assault,43,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Fraud,4,2,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Fraud,41,2,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Kidnapping,4,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Theft,48,2,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Fraud,8,2,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Burglary,31,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,14,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Theft,8,2,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Theft,34,2,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Kidnapping,42,5,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Kidnapping,48,5,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Fraud,31,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Fraud,5,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Murder,19,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Robbery,48,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Assault,33,3,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Robbery,1,4,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Assault,23,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Assault,6,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Fraud,24,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Kidnapping,27,5,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Robbery,36,4,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Assault,5,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Burglary,1,3,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Burglary,27,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Theft,26,2,19.2306,72.8526
+Mumbai,Mumbai City,Colaba,Fraud,7,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Robbery,6,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Burglary,9,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,3,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,5,5,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Kidnapping,39,5,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Murder,16,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Assault,43,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Fraud,46,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Theft,17,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Robbery,5,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Murder,2,5,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,19,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Assault,21,3,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Fraud,21,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Fraud,33,2,19.02,72.8476
+Mumbai,Mumbai City,Fort,Fraud,2,2,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Fraud,49,2,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Fraud,12,2,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Assault,29,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Robbery,9,4,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Kidnapping,5,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Murder,18,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,28,5,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Kidnapping,22,5,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Murder,18,5,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Fraud,43,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Fraud,32,2,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Burglary,13,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,33,5,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Kidnapping,23,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Burglary,3,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Fraud,3,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,44,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,38,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Murder,36,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Theft,42,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Theft,38,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,5,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Burglary,28,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Assault,22,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Burglary,26,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,2,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Murder,48,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Andheri,Burglary,16,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Andheri,Robbery,48,4,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Robbery,6,4,19.0728,72.8826
+Mumbai,Mumbai Suburban,Andheri,Theft,33,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Burglary,41,3,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Burglary,46,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Fraud,21,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,20,5,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Murder,9,5,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Theft,39,2,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Theft,44,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Fraud,31,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,49,2,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Murder,33,5,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Fraud,26,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,16,3,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Murder,36,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,40,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Murder,15,5,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,10,2,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Assault,25,3,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Kidnapping,40,5,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Kidnapping,35,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Burglary,49,3,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Robbery,38,4,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,36,4,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Theft,7,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Theft,10,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Fraud,10,2,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Robbery,19,4,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Burglary,19,3,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Fraud,43,2,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Burglary,9,3,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Robbery,15,4,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Burglary,45,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,10,5,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Theft,39,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Murder,18,5,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Theft,10,2,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Kidnapping,29,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Burglary,13,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Bandra,Robbery,44,4,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Assault,1,3,19.2306,72.8526
+Mumbai,Mumbai City,Colaba,Kidnapping,22,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,40,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Theft,41,2,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Robbery,23,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Robbery,12,4,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Murder,25,5,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,19,5,18.9066,72.8103
+Mumbai,Mumbai City,Colaba,Theft,19,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Murder,45,5,19.1197,72.8464
+Mumbai,Mumbai City,Churchgate,Kidnapping,27,5,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Theft,27,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Murder,1,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Robbery,35,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Assault,21,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,19,5,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Assault,32,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,39,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,16,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,33,5,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Burglary,6,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Burglary,25,3,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Fraud,2,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Theft,1,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Fraud,28,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Theft,40,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Robbery,21,4,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Fraud,40,2,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Fraud,22,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,38,5,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Fraud,38,2,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Kidnapping,7,5,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Burglary,32,3,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Murder,35,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Burglary,8,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Murder,4,5,19.02,72.8476
+Mumbai,Mumbai City,Fort,Assault,31,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Burglary,15,3,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Kidnapping,18,5,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Burglary,43,3,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,31,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Theft,38,2,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Theft,38,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Theft,16,2,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Theft,43,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,1,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Theft,11,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Robbery,9,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Robbery,34,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Andheri,Assault,13,3,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Murder,36,5,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Kidnapping,4,5,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Kidnapping,37,5,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Murder,7,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Robbery,5,4,19.1197,72.8464
+Mumbai,Mumbai City,Marine Lines,Fraud,13,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Burglary,3,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Theft,30,2,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Fraud,49,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,17,5,19.1197,72.8464
+Mumbai,Mumbai City,Churchgate,Robbery,48,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Fraud,12,2,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Burglary,3,3,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Burglary,27,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Murder,35,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Fraud,10,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Theft,19,2,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Murder,44,5,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Kidnapping,34,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Murder,15,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Murder,49,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Fraud,14,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Burglary,18,3,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Assault,6,3,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Assault,42,3,18.9066,72.8103
+Mumbai,Mumbai City,Colaba,Theft,47,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Fraud,19,2,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Assault,17,3,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Murder,6,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,5,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Fraud,42,2,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Theft,36,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Fraud,21,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Burglary,40,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Theft,41,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Theft,18,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Theft,48,2,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Burglary,6,3,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Fraud,18,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Murder,31,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,22,5,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Theft,34,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Fraud,30,2,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Assault,19,3,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Assault,32,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Bandra,Assault,11,3,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Kidnapping,26,5,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Burglary,10,3,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Kidnapping,27,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Theft,35,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Burglary,32,3,19.02,72.8476
+Mumbai,Mumbai City,Fort,Murder,46,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Burglary,29,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Assault,20,3,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Assault,5,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Robbery,47,4,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Assault,22,3,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Kidnapping,42,5,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Burglary,43,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Theft,2,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Assault,31,3,19.02,72.8476
+Mumbai,Mumbai City,Marine Lines,Robbery,48,4,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,22,3,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Fraud,13,2,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Kidnapping,9,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Assault,22,3,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Fraud,41,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Robbery,34,4,19.02,72.8476
+Mumbai,Mumbai City,Marine Lines,Theft,20,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Fraud,32,2,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Robbery,13,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,25,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Theft,6,2,19.1197,72.8464
+Mumbai,Mumbai City,Colaba,Robbery,11,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Theft,49,2,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Fraud,48,2,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Murder,24,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Fraud,24,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Robbery,39,4,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Robbery,25,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Theft,9,2,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Murder,28,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Murder,46,5,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Fraud,2,2,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Kidnapping,14,5,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Fraud,49,2,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Theft,33,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Burglary,15,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Theft,4,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Assault,4,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Theft,39,2,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Kidnapping,9,5,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Burglary,49,3,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Kidnapping,20,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Murder,35,5,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Murder,36,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Burglary,46,3,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Burglary,43,3,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Murder,23,5,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Burglary,8,3,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Theft,8,2,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Robbery,31,4,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Theft,5,2,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Burglary,2,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Murder,34,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Assault,8,3,19.02,72.8476
+Mumbai,Mumbai City,Fort,Murder,9,5,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Kidnapping,29,5,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Assault,1,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Murder,40,5,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Fraud,17,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Robbery,2,4,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,20,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,44,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Murder,31,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Dadar,Fraud,21,2,19.02,72.8476
+Mumbai,Mumbai City,Fort,Theft,2,2,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Fraud,19,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Burglary,26,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Fraud,18,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Bandra,Fraud,3,2,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Assault,46,3,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Burglary,42,3,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Assault,7,3,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Burglary,14,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Robbery,49,4,19.1197,72.8464
+Mumbai,Mumbai City,Marine Lines,Fraud,35,2,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Fraud,36,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Fraud,43,2,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Fraud,34,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,45,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Robbery,32,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Fraud,2,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Theft,2,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Andheri,Assault,46,3,19.1197,72.8464
+Mumbai,Mumbai City,Colaba,Robbery,7,4,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Kidnapping,24,5,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Burglary,13,3,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Kidnapping,41,5,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Theft,34,2,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Robbery,12,4,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Theft,47,2,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Murder,23,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Assault,7,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Robbery,4,4,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Burglary,8,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Assault,29,3,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Theft,26,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Burglary,16,3,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Robbery,42,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Theft,16,2,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Murder,35,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,45,5,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Assault,24,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Theft,3,2,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Murder,19,5,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Robbery,28,4,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Burglary,35,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Fraud,14,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Robbery,48,4,19.2306,72.8526
+Mumbai,Mumbai City,Colaba,Kidnapping,20,5,18.9066,72.8103
+Mumbai,Mumbai City,Colaba,Burglary,36,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,29,5,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Murder,32,5,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Kidnapping,19,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Fraud,37,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Kurla,Fraud,32,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Theft,29,2,19.2306,72.8526
+Mumbai,Mumbai City,Colaba,Robbery,43,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,29,5,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Robbery,37,4,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Burglary,18,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Fraud,40,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Dadar,Assault,40,3,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Murder,33,5,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Robbery,39,4,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Assault,47,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Assault,22,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Fraud,27,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Kidnapping,24,5,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Robbery,21,4,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Murder,9,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Burglary,46,3,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Robbery,22,4,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Theft,25,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Burglary,21,3,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Robbery,6,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Assault,42,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Murder,34,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Assault,40,3,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Robbery,11,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Assault,10,3,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Burglary,13,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Theft,19,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,5,5,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Burglary,1,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Assault,12,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Robbery,19,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Assault,9,3,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Fraud,48,2,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Assault,17,3,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Murder,11,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Theft,38,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Assault,43,3,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Burglary,41,3,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Murder,30,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Bandra,Burglary,12,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Murder,41,5,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Robbery,5,4,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Assault,9,3,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Assault,42,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Theft,47,2,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Kidnapping,29,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Robbery,35,4,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Burglary,1,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Fraud,16,2,19.1197,72.8464
+Mumbai,Mumbai City,Colaba,Kidnapping,38,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,40,5,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Theft,27,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Theft,29,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Theft,20,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Robbery,29,4,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Assault,19,3,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Theft,36,2,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Theft,33,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Assault,15,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Theft,42,2,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Assault,2,3,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Burglary,30,3,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Murder,43,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,45,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Assault,24,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,12,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Theft,29,2,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Assault,4,3,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Assault,33,3,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Fraud,1,2,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Fraud,44,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,43,5,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Kidnapping,33,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Murder,49,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Theft,32,2,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Theft,41,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Murder,16,5,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Kidnapping,28,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Theft,33,2,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Theft,24,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Theft,5,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Assault,38,3,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Murder,26,5,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Fraud,28,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Assault,16,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,45,5,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Assault,21,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Robbery,33,4,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Assault,32,3,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Murder,10,5,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Assault,25,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,45,3,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Robbery,2,4,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Assault,5,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Burglary,7,3,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Theft,2,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Assault,5,3,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Robbery,16,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Burglary,16,3,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Robbery,9,4,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Murder,49,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Murder,46,5,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Burglary,6,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Murder,40,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Murder,7,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,21,5,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,36,2,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Theft,9,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Burglary,13,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Fraud,1,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Kidnapping,32,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Theft,39,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Fraud,2,2,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Fraud,46,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Theft,15,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Murder,30,5,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Robbery,37,4,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Theft,37,2,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Robbery,26,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Murder,11,5,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Burglary,16,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Murder,19,5,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Theft,43,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,28,5,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Murder,7,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Robbery,49,4,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,47,5,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Robbery,2,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,7,5,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Assault,29,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Robbery,26,4,19.1197,72.8464
+Mumbai,Mumbai City,Colaba,Robbery,9,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Theft,36,2,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Theft,34,2,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,1,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Bandra,Murder,24,5,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Fraud,43,2,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Kidnapping,5,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Theft,25,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Andheri,Murder,2,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Theft,12,2,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Kidnapping,34,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Fraud,33,2,19.1197,72.8464
+Mumbai,Mumbai City,Churchgate,Kidnapping,25,5,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,15,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,38,5,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Murder,25,5,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Burglary,42,3,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Robbery,29,4,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Robbery,37,4,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Assault,42,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Murder,12,5,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Robbery,1,4,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Theft,19,2,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Theft,6,2,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Murder,39,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Murder,40,5,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Fraud,31,2,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Burglary,10,3,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Burglary,26,3,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Assault,35,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Theft,12,2,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Fraud,14,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,29,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Burglary,15,3,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Burglary,22,3,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Kidnapping,10,5,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Burglary,8,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,24,5,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Murder,38,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,11,5,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Burglary,19,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Murder,17,5,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Assault,34,3,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Theft,4,2,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Theft,35,2,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Kidnapping,37,5,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Assault,28,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Fraud,24,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Burglary,36,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,4,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Burglary,8,3,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Robbery,48,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Fraud,24,2,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Fraud,17,2,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Murder,39,5,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Assault,28,3,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Burglary,43,3,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Kidnapping,8,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,40,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Theft,26,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Robbery,5,4,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Assault,23,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Theft,4,2,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Fraud,6,2,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Murder,26,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Burglary,28,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Dadar,Assault,30,3,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Assault,4,3,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Assault,12,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,43,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,35,5,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Theft,22,2,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Burglary,39,3,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Fraud,2,2,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Kidnapping,34,5,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,41,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Fraud,13,2,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Murder,45,5,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Robbery,10,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Burglary,37,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Robbery,3,4,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Murder,45,5,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Burglary,7,3,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Robbery,33,4,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Assault,23,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Murder,30,5,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Robbery,4,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Assault,20,3,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Robbery,8,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,3,5,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Theft,27,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Burglary,11,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Kidnapping,46,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Murder,7,5,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Robbery,24,4,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Robbery,1,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Burglary,9,3,19.02,72.8476
+Mumbai,Mumbai City,Marine Lines,Assault,41,3,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Theft,44,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,46,3,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Burglary,33,3,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Assault,34,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Murder,31,5,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Murder,5,5,18.9066,72.8103
+Mumbai,Mumbai City,Fort,Robbery,21,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Murder,2,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Dadar,Burglary,43,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,22,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Murder,44,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,45,5,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Theft,11,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Theft,3,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Theft,16,2,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Murder,12,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Robbery,10,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Murder,17,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Robbery,12,4,19.0544,72.8406
+Mumbai,Mumbai Suburban,Bandra,Robbery,7,4,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Murder,8,5,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Theft,45,2,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Kidnapping,19,5,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Fraud,38,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Theft,48,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Theft,34,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Andheri,Fraud,30,2,19.1197,72.8464
+Mumbai,Mumbai City,Churchgate,Burglary,26,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Theft,44,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Robbery,31,4,19.02,72.8476
+Mumbai,Mumbai City,Marine Lines,Fraud,20,2,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Kidnapping,32,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Assault,35,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Robbery,42,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Burglary,21,3,19.1197,72.8464
+Mumbai,Mumbai City,Marine Lines,Kidnapping,31,5,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Murder,35,5,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Theft,3,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Murder,43,5,19.1197,72.8464
+Mumbai,Mumbai City,Marine Lines,Murder,12,5,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Assault,24,3,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Burglary,22,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Theft,4,2,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Kidnapping,49,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Burglary,25,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Theft,11,2,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Burglary,36,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Fraud,48,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Robbery,41,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Dadar,Theft,30,2,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Assault,19,3,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Assault,7,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Assault,1,3,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Kidnapping,43,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Bandra,Burglary,28,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Fraud,24,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,40,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Murder,12,5,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Robbery,22,4,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Fraud,29,2,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Fraud,47,2,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Assault,45,3,18.9066,72.8103
+Mumbai,Mumbai City,Colaba,Murder,16,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Fraud,11,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Assault,38,3,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Murder,2,5,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Robbery,44,4,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Kidnapping,40,5,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Assault,23,3,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Theft,20,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Murder,46,5,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Kidnapping,34,5,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Theft,32,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Robbery,9,4,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,4,2,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Assault,17,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Theft,47,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,42,5,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Robbery,16,4,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Theft,26,2,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,41,5,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Fraud,15,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Murder,48,5,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Robbery,42,4,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Assault,21,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,38,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Robbery,47,4,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Kidnapping,1,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Theft,48,2,19.1197,72.8464
+Mumbai,Mumbai City,Marine Lines,Burglary,21,3,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Theft,2,2,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Theft,9,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Burglary,8,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Theft,37,2,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Theft,16,2,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Theft,20,2,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Kidnapping,15,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Fraud,6,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Murder,35,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Burglary,30,3,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Murder,40,5,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Fraud,24,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Murder,42,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Robbery,25,4,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Theft,11,2,18.9066,72.8103
+Mumbai,Mumbai City,Churchgate,Fraud,26,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Robbery,1,4,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Theft,49,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Theft,6,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Theft,15,2,19.02,72.8476
+Mumbai,Mumbai City,Fort,Theft,23,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Murder,13,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Andheri,Burglary,19,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Assault,31,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Fraud,27,2,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Fraud,6,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,31,4,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Murder,30,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Robbery,6,4,19.0728,72.8826
+Mumbai,Mumbai Suburban,Kurla,Burglary,32,3,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Assault,14,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Theft,32,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Burglary,11,3,19.2306,72.8526
+Mumbai,Mumbai City,Marine Lines,Robbery,20,4,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Assault,36,3,18.9436,72.8256
+Mumbai,Mumbai City,Marine Lines,Kidnapping,24,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Fraud,22,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Burglary,45,3,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Murder,42,5,18.9066,72.8103
+Mumbai,Mumbai City,Fort,Robbery,7,4,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Theft,23,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Fraud,11,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Fraud,21,2,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Kidnapping,35,5,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Kidnapping,7,5,18.9356,72.8356
+Mumbai,Mumbai City,Churchgate,Burglary,14,3,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Assault,16,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Fraud,5,2,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,6,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Burglary,36,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Assault,5,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Theft,33,2,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Robbery,24,4,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Burglary,13,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Assault,8,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Assault,28,3,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Murder,9,5,18.9066,72.8103
+Mumbai,Mumbai City,Fort,Burglary,15,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Assault,12,3,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Assault,34,3,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Robbery,24,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Murder,49,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,25,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,14,5,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Assault,42,3,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Assault,13,3,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Assault,19,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,1,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,19,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Fraud,23,2,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Kidnapping,30,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Assault,17,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,49,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Andheri,Murder,40,5,19.1197,72.8464
+Mumbai,Mumbai City,Colaba,Kidnapping,46,5,18.9066,72.8103
+Mumbai,Mumbai City,Colaba,Fraud,1,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Fraud,7,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Burglary,5,3,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Kidnapping,23,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Murder,33,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Theft,14,2,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Theft,38,2,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Burglary,29,3,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Burglary,17,3,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Assault,37,3,18.9066,72.8103
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,5,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Bandra,Murder,41,5,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Murder,32,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Assault,31,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Burglary,7,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Theft,49,2,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Robbery,16,4,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Murder,11,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Dadar,Kidnapping,11,5,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Kidnapping,32,5,18.9336,72.8256
+Mumbai,Mumbai City,Churchgate,Kidnapping,2,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Murder,36,5,19.02,72.8476
+Mumbai,Mumbai City,Fort,Theft,5,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Murder,46,5,19.02,72.8476
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,21,5,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Assault,40,3,18.9236,72.8216
+Mumbai,Mumbai City,Churchgate,Fraud,38,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Robbery,44,4,19.0544,72.8406
+Mumbai,Mumbai City,Colaba,Theft,31,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Burglary,24,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,15,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Assault,43,3,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Murder,31,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,3,5,19.1197,72.8464
+Mumbai,Mumbai City,Nariman Point,Kidnapping,33,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Robbery,1,4,19.02,72.8476
+Mumbai,Mumbai City,Nariman Point,Murder,4,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Burglary,13,3,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Kidnapping,5,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Assault,25,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Kidnapping,6,5,18.9356,72.8356
+Mumbai,Mumbai City,Fort,Kidnapping,20,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Bandra,Murder,3,5,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Burglary,41,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Assault,15,3,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Assault,42,3,18.9336,72.8256
+Mumbai,Mumbai City,Nariman Point,Kidnapping,24,5,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Assault,11,3,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Burglary,49,3,18.9236,72.8216
+Mumbai,Mumbai Suburban,Borivali,Robbery,20,4,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Murder,25,5,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Theft,24,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Andheri,Murder,19,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Theft,7,2,19.2306,72.8526
+Mumbai,Mumbai City,Colaba,Robbery,26,4,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Murder,32,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Bandra,Fraud,43,2,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Theft,2,2,18.9436,72.8256
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,3,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,27,5,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Robbery,47,4,18.9236,72.8216
+Mumbai,Mumbai City,Colaba,Kidnapping,34,5,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Fraud,3,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Assault,18,3,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Burglary,4,3,18.9436,72.8256
+Mumbai,Mumbai Suburban,Kurla,Robbery,11,4,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Burglary,36,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,34,5,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Kidnapping,47,5,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Robbery,30,4,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Murder,6,5,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Robbery,3,4,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Murder,40,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Robbery,37,4,19.0544,72.8406
+Mumbai,Mumbai City,Marine Lines,Fraud,9,2,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Kidnapping,29,5,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Fraud,25,2,18.9356,72.8356
+Mumbai,Mumbai City,Nariman Point,Fraud,42,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Bandra,Burglary,48,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Borivali,Assault,2,3,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Kidnapping,35,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Dadar,Burglary,8,3,19.02,72.8476
+Mumbai,Mumbai City,Marine Lines,Robbery,18,4,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Robbery,47,4,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Murder,41,5,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Theft,34,2,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Theft,35,2,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Fraud,39,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Robbery,28,4,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Theft,27,2,19.02,72.8476
+Mumbai,Mumbai City,Churchgate,Burglary,26,3,18.9336,72.8256
+Mumbai,Mumbai City,Fort,Assault,31,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Theft,38,2,19.2306,72.8526
+Mumbai,Mumbai City,Nariman Point,Murder,42,5,18.9236,72.8216
+Mumbai,Mumbai Suburban,Andheri,Fraud,6,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Murder,5,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Borivali,Assault,34,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Burglary,34,3,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Fraud,30,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Murder,7,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Burglary,15,3,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Theft,15,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,29,5,19.0728,72.8826
+Mumbai,Mumbai City,Nariman Point,Robbery,35,4,18.9236,72.8216
+Mumbai,Mumbai City,Nariman Point,Robbery,45,4,18.9236,72.8216
+Mumbai,Mumbai City,Fort,Assault,40,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Dadar,Robbery,28,4,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Fraud,45,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Andheri,Robbery,48,4,19.1197,72.8464
+Mumbai,Mumbai Suburban,Dadar,Assault,48,3,19.02,72.8476
+Mumbai,Mumbai Suburban,Andheri,Assault,34,3,19.1197,72.8464
+Mumbai,Mumbai Suburban,Borivali,Robbery,31,4,19.2306,72.8526
+Mumbai,Mumbai City,Colaba,Fraud,32,2,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Kidnapping,26,5,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Theft,36,2,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Fraud,19,2,19.0728,72.8826
+Mumbai,Mumbai City,Colaba,Murder,15,5,18.9066,72.8103
+Mumbai,Mumbai City,Colaba,Robbery,42,4,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Fraud,32,2,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Fraud,20,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Kidnapping,23,5,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Fraud,6,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Robbery,18,4,19.02,72.8476
+Mumbai,Mumbai City,Fort,Murder,40,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Robbery,20,4,19.1197,72.8464
+Mumbai,Mumbai City,Churchgate,Murder,27,5,18.9336,72.8256
+Mumbai,Mumbai City,Marine Lines,Murder,20,5,18.9436,72.8256
+Mumbai,Mumbai City,Churchgate,Fraud,9,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Murder,38,5,19.0544,72.8406
+Mumbai,Mumbai City,Fort,Robbery,24,4,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Kidnapping,13,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Andheri,Theft,44,2,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Kidnapping,22,5,18.9356,72.8356
+Mumbai,Mumbai City,Marine Lines,Kidnapping,32,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Borivali,Murder,22,5,19.2306,72.8526
+Mumbai,Mumbai Suburban,Bandra,Robbery,32,4,19.0544,72.8406
+Mumbai,Mumbai City,Churchgate,Kidnapping,4,5,18.9336,72.8256
+Mumbai,Mumbai City,Colaba,Robbery,41,4,18.9066,72.8103
+Mumbai,Mumbai City,Nariman Point,Robbery,46,4,18.9236,72.8216
+Mumbai,Mumbai Suburban,Kurla,Assault,31,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Andheri,Theft,43,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Kurla,Assault,22,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Kurla,Assault,26,3,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Kidnapping,34,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Borivali,Assault,29,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Theft,48,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Assault,47,3,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Burglary,16,3,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Murder,29,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Kurla,Assault,5,3,19.0728,72.8826
+Mumbai,Mumbai City,Fort,Murder,4,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Kidnapping,36,5,19.1197,72.8464
+Mumbai,Mumbai City,Colaba,Theft,23,2,18.9066,72.8103
+Mumbai,Mumbai Suburban,Borivali,Burglary,46,3,19.2306,72.8526
+Mumbai,Mumbai City,Fort,Fraud,36,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Robbery,35,4,19.0728,72.8826
+Mumbai,Mumbai City,Churchgate,Kidnapping,34,5,18.9336,72.8256
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,24,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Andheri,Theft,46,2,19.1197,72.8464
+Mumbai,Mumbai Suburban,Bandra,Robbery,38,4,19.0544,72.8406
+Mumbai,Mumbai City,Nariman Point,Murder,38,5,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Murder,49,5,18.9436,72.8256
+Mumbai,Mumbai Suburban,Dadar,Theft,13,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Dadar,Theft,27,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Borivali,Burglary,48,3,19.2306,72.8526
+Mumbai,Mumbai Suburban,Kurla,Murder,30,5,19.0728,72.8826
+Mumbai,Mumbai Suburban,Dadar,Fraud,36,2,19.02,72.8476
+Mumbai,Mumbai City,Colaba,Kidnapping,18,5,18.9066,72.8103
+Mumbai,Mumbai City,Fort,Murder,20,5,18.9356,72.8356
+Mumbai,Mumbai Suburban,Andheri,Fraud,44,2,19.1197,72.8464
+Mumbai,Mumbai City,Churchgate,Burglary,43,3,18.9336,72.8256
+Mumbai,Mumbai Suburban,Andheri,Murder,31,5,19.1197,72.8464
+Mumbai,Mumbai Suburban,Andheri,Theft,26,2,19.1197,72.8464
+Mumbai,Mumbai City,Fort,Assault,11,3,18.9356,72.8356
+Mumbai,Mumbai Suburban,Kurla,Fraud,45,2,19.0728,72.8826
+Mumbai,Mumbai Suburban,Borivali,Theft,29,2,19.2306,72.8526
+Mumbai,Mumbai City,Churchgate,Theft,43,2,18.9336,72.8256
+Mumbai,Mumbai Suburban,Dadar,Theft,9,2,19.02,72.8476
+Mumbai,Mumbai Suburban,Bandra,Kidnapping,18,5,19.0544,72.8406
+Mumbai,Mumbai Suburban,Kurla,Assault,37,3,19.0728,72.8826
+Mumbai,Mumbai City,Marine Lines,Burglary,20,3,18.9436,72.8256
+Mumbai,Mumbai City,Nariman Point,Robbery,35,4,18.9236,72.8216
+Mumbai,Mumbai City,Marine Lines,Robbery,12,4,18.9436,72.8256
+Mumbai,Mumbai City,Colaba,Theft,8,2,18.9066,72.8103
+Mumbai,Mumbai City,Fort,Murder,49,5,18.9356,72.8356
+Mumbai,Mumbai City,Colaba,Theft,8,2,18.9066,72.8103
+Mumbai,Mumbai City,Marine Lines,Murder,38,5,18.9436,72.8256
+Mumbai,Mumbai City,Fort,Theft,22,2,18.9356,72.8356
+Mumbai,Mumbai Suburban,Borivali,Murder,46,5,19.2306,72.8526

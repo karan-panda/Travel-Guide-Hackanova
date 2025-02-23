@@ -1,25 +1,68 @@
-import { Box, Button, Heading, Text, useDisclosure, VStack, IconButton } from "@chakra-ui/react"
+import { 
+    Box, 
+    Button, 
+    Heading, 
+    Text, 
+    useDisclosure, 
+    IconButton,
+    VStack,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverHeader,
+    PopoverBody,
+    Badge,
+    Divider
+} from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { FaBell, FaThermometerHalf, FaWind, FaCloudRain, FaExclamationTriangle } from 'react-icons/fa'
 import Link from "next/link"
 import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerFooter, DrawerCloseButton } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useRef } from 'react'
+
+// Types for weather data
+interface WeatherData {
+    temperature: number;
+    windSpeed: number;
+    humidity: number;
+    alerts: string[];
+    isSafe: boolean;
+}
+
+interface SafetyStatus {
+    color: string;
+    text: string;
+    description: string;
+}
 
 const Navbar: React.FC = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef<HTMLButtonElement>(null)
     const router = useRouter()
 
+    // Mock weather data - replace with actual data fetching
+    const weatherData: WeatherData = {
+        temperature: 32.5,
+        windSpeed: 12.3,
+        humidity: 65,
+        alerts: ["Heavy rainfall expected"],
+        isSafe: false
+    }
+
+    const safetyStatus: SafetyStatus = {
+        color: weatherData.isSafe ? "green" : "red",
+        text: weatherData.isSafe ? "Safe Conditions" : "Exercise Caution",
+        description: weatherData.isSafe 
+            ? "Current conditions are safe for outdoor activities."
+            : "Weather conditions may pose risks. Stay alert and follow safety guidelines."
+    }
+
     const handleCommunity = () => {
         router.push('/community')
     }
-    const handleHome = () => {
-        router.push('/') // Goes to landing page
-      }
-    
-      const handleDashboard = () => {
-        router.push('/dashboard') // Goes to map/dashboard
-      }
 
     return (
         <>
@@ -58,16 +101,96 @@ const Navbar: React.FC = () => {
                         </Heading>
                     </Link>
                 </Box>
-                <IconButton
-                    aria-label="Menu"
-                    icon={<HamburgerIcon />}
-                    onClick={onOpen}
-                    ref={btnRef}
-                    variant="ghost"
-                    color="white"
-                    _hover={{ bg: "whiteAlpha.200" }}
-                    size="lg"
-                />
+
+                <Box display="flex" alignItems="center" gap={4}>
+                    <Popover placement="bottom-end">
+                        <PopoverTrigger>
+                            <IconButton
+                                aria-label="Weather and Safety Info"
+                                icon={<FaBell />}
+                                variant="ghost"
+                                color="white"
+                                _hover={{ bg: "whiteAlpha.200" }}
+                                size="lg"
+                                animation={weatherData.isSafe ? undefined : "pulse 2s infinite"}
+                                sx={{
+                                    '@keyframes pulse': {
+                                        '0%': { boxShadow: '0 0 0 0 rgba(229, 62, 62, 0.4)' },
+                                        '70%': { boxShadow: '0 0 0 10px rgba(229, 62, 62, 0)' },
+                                        '100%': { boxShadow: '0 0 0 0 rgba(229, 62, 62, 0)' }
+                                    }
+                                }}
+                            />
+                        </PopoverTrigger>
+                        <PopoverContent bg="rgba(0, 0, 0, 0.95)" border="1px solid" borderColor="whiteAlpha.200" width="300px">
+                            <PopoverArrow bg="rgba(0, 0, 0, 0.95)" />
+                            <PopoverCloseButton color="white" />
+                            <PopoverHeader borderBottom="1px solid" borderColor="whiteAlpha.200" color="white">
+                                Kandivali Weather & Safety Status
+                            </PopoverHeader>
+                            <PopoverBody color="white">
+                                <VStack align="stretch" spacing={3} p={2}>
+                                    <Badge colorScheme={safetyStatus.color} p={2} fontSize="md" textAlign="center">
+                                        {safetyStatus.text}
+                                    </Badge>
+                                    
+                                    <Text fontSize="sm" color="whiteAlpha.800">
+                                        {safetyStatus.description}
+                                    </Text>
+
+                                    <Divider />
+
+                                    <Box>
+                                        <Text fontSize="sm" mb={2} fontWeight="bold" color="whiteAlpha.900">
+                                            Current Conditions:
+                                        </Text>
+                                        <VStack align="stretch" spacing={2}>
+                                            <Box display="flex" alignItems="center" gap={2}>
+                                                <FaThermometerHalf />
+                                                <Text fontSize="sm">{weatherData.temperature.toFixed(1)}°C</Text>
+                                            </Box>
+                                            <Box display="flex" alignItems="center" gap={2}>
+                                                <FaWind />
+                                                <Text fontSize="sm">{weatherData.windSpeed.toFixed(1)} km/h</Text>
+                                            </Box>
+                                            <Box display="flex" alignItems="center" gap={2}>
+                                                <FaCloudRain />
+                                                <Text fontSize="sm">Humidity: {weatherData.humidity.toFixed(0)}%</Text>
+                                            </Box>
+                                        </VStack>
+                                    </Box>
+
+                                    <Divider />
+
+                                    {weatherData.alerts.length > 0 && (
+                                        <Box>
+                                            <Text fontSize="sm" mb={2} fontWeight="bold" color="whiteAlpha.900">
+                                                Active Alerts:
+                                            </Text>
+                                            {weatherData.alerts.map((alert, index) => (
+                                                <Box key={index} display="flex" alignItems="center" gap={2} color="yellow.400">
+                                                    <FaExclamationTriangle />
+                                                    <Text fontSize="sm">{alert}</Text>
+                                                </Box>
+                                            ))}
+                                        </Box>
+                                    )}
+                                </VStack>
+                            </PopoverBody>
+                        </PopoverContent>
+                    </Popover>
+
+                    <IconButton
+                        aria-label="Menu"
+                        icon={<HamburgerIcon />}
+                        onClick={onOpen}
+                        ref={btnRef}
+                        variant="ghost"
+                        color="white"
+                        _hover={{ bg: "whiteAlpha.200" }}
+                        size="lg"
+                    />
+                </Box>
             </Box>
 
             {/* Drawer */}
@@ -109,7 +232,6 @@ const Navbar: React.FC = () => {
                                 { text: "Report Incident", path: "/reportIncident" },
                                 { text: "Community", onClick: handleCommunity },
                                 { text: "Explore Safe spot", path: "/safespot" },
-                                
                                 { text: "Ready to Help", path: "/announcement" }
                             ].map((item, index) => (
                                 <Box

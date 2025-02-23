@@ -18,7 +18,7 @@ const AIChat = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const chatHistoryRef = useRef(null);
-  const apiKey = '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';
+  const apiKey = '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';
 
   useEffect(() => {
     if (chatHistoryRef.current) {
@@ -55,7 +55,7 @@ const AIChat = () => {
           'X-Title': 'Safety App Chat',
         },
         body: JSON.stringify({
-          model:"deepseek/deepseek-r1-distill-llama-70b:free",
+          model:"deepseek/deepseek-r1:free",
           messages: [...messages, { role: 'user', content: currentInput }],
         }),
       });

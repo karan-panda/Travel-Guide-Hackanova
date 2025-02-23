@@ -302,7 +302,7 @@ const [name, setname] = useState<string>()
                 w="full"
                 mt={4}
               >
-                Update Profile
+                Update Profile / Sign Up
               </Button>
             </VStack>
           </Box>

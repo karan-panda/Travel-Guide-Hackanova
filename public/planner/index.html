@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Aware Route Planner</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+    <style>
+        :root {
+            --primary: #2A5C82;
+            --secondary: #5DA9E9;
+            --accent: #FF6B6B;
+            --background: #F8F9FA;
+            --text: #2D3436;
+        }
+    
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 0.6s ease-in;
+        }
+    
+        .input-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+    
+        .location-input {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+    
+        input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+    
+        input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 2px 8px rgba(93, 169, 233, 0.2);
+        }
+    
+        button {
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+    
+        button:hover {
+            background-color: #1D4561;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(42, 92, 130, 0.2);
+        }
+    
+        button.selected {
+            background-color: var(--secondary);
+            box-shadow: 0 2px 6px rgba(93, 169, 233, 0.3);
+        }
+    
+        #map {
+            height: 600px;
+            margin-bottom: 32px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+    
+        #map:hover {
+            transform: scale(1.005);
+        }
+    
+        .error {
+            background-color: #FFEBEE;
+            color: #B71C1C;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border: 2px solid #FFCDD2;
+            display: none;
+            animation: shake 0.4s ease;
+        }
+    
+        .routes-info {
+            margin-top: 32px;
+            display: grid;
+            gap: 20px;
+        }
+    
+        .route-card {
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    
+        .route-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+    
+        .route-card.best {
+            border-left: 4px solid #4CAF50;
+        }
+    
+        .route-card.alternative {
+            border-left: 4px solid #FF9800;
+        }
+    
+        .heatmap-control {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+        }
+    
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+    
+        /* Loading spinner animation */
+        .loader {
+            animation: spin 1s linear infinite;
+        }
+    
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather-Aware Route Planner</h1>
+        
+        <div class="input-group">
+            <div>
+                <div class="location-input">
+                    <input type="text" id="sourceInput" placeholder="Enter source address">
+                    <button onclick="handleSourceSubmit()">Set Source</button>
+                </div>
+                <button id="selectSource" onclick="setSelectedPoint('source')">Select Source on Map</button>
+            </div>
+            
+            <div>
+                <div class="location-input">
+                    <input type="text" id="destInput" placeholder="Enter destination address">
+                    <button onclick="handleDestSubmit()">Set Destination</button>
+                </div>
+                <button id="selectDest" onclick="setSelectedPoint('destination')">Select Destination on Map</button>
+            </div>
+        </div>
+
+        <button onclick="getRoutes()">Find Routes</button>
+        
+        <div class="heatmap-control">
+            <button onclick="toggleHeatmap()">Toggle Crime Heatmap</button>
+        </div>
+        
+        <div id="error" class="error"></div>
+        
+        <div id="map"></div>
+        
+        <div id="routesInfo" class="routes-info">
+            <h3>Route Information:</h3>
+        </div>
+    </div>
+
+    <script>
+        let map;
+        let sourceMarker;
+        let destMarker;
+        let routeLayers = [];
+        let selectedPoint = null;
+        let heatmapLayer;
+        
+        const weatherApiKey = '97d52917baf88b6b5a75733c14d21996';
+        let source = { lat: 19.0760, lng: 72.8777 }; // Default to Mumbai coordinates
+        let destination = { lat: 19.0760, lng: 72.8777 };
+
+        // Initialize the map
+        function initMap() {
+            map = L.map('map').setView([19.0760, 72.8777], 11); // Mumbai coordinates
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            sourceMarker = L.marker([source.lat, source.lng])
+                .bindPopup('Source')
+                .addTo(map);
+
+            destMarker = L.marker([destination.lat, destination.lng])
+                .bindPopup('Destination')
+                .addTo(map);
+
+            map.on('click', handleMapClick);
+        }
+
+        // Geocode an address to get coordinates
+        async function geocodeAddress(address) {
+            try {
+                const response = await fetch(
+                    `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`
+                );
+                const data = await response.json();
+                if (data.length > 0) {
+                    return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+                }
+                throw new Error('Location not found');
+            } catch (err) {
+                showError('Failed to geocode address');
+                return null;
+            }
+        }
+
+        // Handle source address submission
+        async function handleSourceSubmit() {
+            const address = document.getElementById('sourceInput').value;
+            const location = await geocodeAddress(address);
+            if (location) {
+                source = location;
+                sourceMarker.setLatLng([location.lat, location.lng]);
+                map.setView([location.lat, location.lng]);
+            }
+        }
+
+        // Handle destination address submission
+        async function handleDestSubmit() {
+            const address = document.getElementById('destInput').value;
+            const location = await geocodeAddress(address);
+            if (location) {
+                destination = location;
+                destMarker.setLatLng([location.lat, location.lng]);
+                map.setView([location.lat, location.lng]);
+            }
+        }
+
+        // Set selected point (source or destination)
+        function setSelectedPoint(point) {
+            selectedPoint = point;
+            document.getElementById('selectSource').classList.toggle('selected', point === 'source');
+            document.getElementById('selectDest').classList.toggle('selected', point === 'destination');
+        }
+
+        // Handle map click to set source or destination
+        function handleMapClick(e) {
+            if (selectedPoint === 'source') {
+                source = e.latlng;
+                sourceMarker.setLatLng(e.latlng);
+            } else if (selectedPoint === 'destination') {
+                destination = e.latlng;
+                destMarker.setLatLng(e.latlng);
+            }
+        }
+
+        // Calculate risk factor based on weather and route
+        function calculateRiskFactor(weather, route) {
+            let risk = 0;
+            
+            if (weather.weather[0].main === 'Rain') risk += 30;
+            if (weather.weather[0].main === 'Snow') risk += 50;
+            if (weather.weather[0].main === 'Fog') risk += 20;
+            
+            risk += (route.distance / 1000) * 0.1;
+            
+            return risk;
+        }
+
+        // Show error message
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // Fetch and display routes
+        async function getRoutes() {
+            try {
+                // Clear existing routes
+                routeLayers.forEach(layer => map.removeLayer(layer));
+                routeLayers = [];
+                document.getElementById('routesInfo').innerHTML = '<h3>Route Information:</h3>';
+
+                // Get weather data
+                const weatherResponse = await fetch(
+                    `https://api.openweathermap.org/data/2.5/weather?lat=${source.lat}&lon=${source.lng}&appid=${weatherApiKey}`
+                );
+                const weatherData = await weatherResponse.json();
+
+                // Get routes
+                const response = await fetch(
+                    `https://router.project-osrm.org/route/v1/driving/${source.lng},${source.lat};${destination.lng},${destination.lat}?alternatives=true&geometries=geojson`
+                );
+                const data = await response.json();
+
+                if (data.routes) {
+                    const routesWithRisk = data.routes.map((route, index) => {
+                        const riskFactor = calculateRiskFactor(weatherData, route);
+                        
+                        // Create route layer
+                        const coordinates = route.geometry.coordinates.map(coord => [coord[1], coord[0]]);
+                        const color = index === 0 ? '#22c55e' : '#ef4444';
+                        
+                        const routeLayer = L.polyline(coordinates, {
+                            color: color,
+                            weight: 4
+                        }).addTo(map);
+
+                        routeLayer.bindPopup(`
+                            Distance: ${(route.distance / 1000).toFixed(2)} km<br>
+                            Duration: ${Math.round(route.duration / 60)} minutes<br>
+                            Risk Score: ${riskFactor.toFixed(2)}
+                        `);
+
+                        routeLayers.push(routeLayer);
+                        
+                        return {
+                            path: coordinates,
+                            risk: riskFactor,
+                            distance: route.distance,
+                            duration: route.duration
+                        };
+                    });
+
+                    // Sort routes by risk and update UI
+                    routesWithRisk.sort((a, b) => a.risk - b.risk);
+                    
+                    const routesInfo = document.getElementById('routesInfo');
+                    routesWithRisk.forEach((route, index) => {
+                        const routeCard = document.createElement('div');
+                        routeCard.className = `route-card ${index === 0 ? 'best' : 'alternative'}`;
+                        routeCard.innerHTML = `
+                            Route ${index + 1}:<br>
+                            Distance: ${(route.distance / 1000).toFixed(2)} km<br>
+                            Duration: ${Math.round(route.duration / 60)} minutes<br>
+                            Risk Score: ${route.risk.toFixed(2)}
+                        `;
+                        routesInfo.appendChild(routeCard);
+                    });
+                }
+            } catch (err) {
+                showError('Failed to fetch routes');
+            }
+        }
+
+        // Load crime data from CSV
+        async function loadCrimeData() {
+            try {
+                const response = await fetch('mumbai_crime.csv');
+                const csvData = await response.text();
+                
+                return new Promise(resolve => {
+                    Papa.parse(csvData, {
+                        header: true,
+                        dynamicTyping: true,
+                        complete: function(results) {
+                            const heatmapData = results.data
+                                .filter(row => row.Latitude && row.Longitude)
+                                .map(row => {
+                                    const intensity = (row['Severity Value'] * row.Frequency) / 100;
+                                    return [
+                                        row.Latitude,
+                                        row.Longitude,
+                                        intensity
+                                    ];
+                                });
+                            resolve(heatmapData);
+                        }
+                    });
+                });
+            } catch (err) {
+                console.error('Error loading crime data:', err);
+                showError('Failed to load crime data');
+                return [];
+            }
+        }
+
+        // Update heatmap with crime data
+        async function updateHeatmap() {
+            if (heatmapLayer) {
+                map.removeLayer(heatmapLayer);
+            }
+
+            const crimeData = await loadCrimeData();
+            heatmapLayer = L.heatLayer(crimeData, {
+                radius: 25,
+                blur: 15,
+                maxZoom: 15,
+                gradient: {
+                    0.4: 'blue',
+                    0.6: 'yellow',
+                    0.8: 'orange',
+                    1.0: 'red'
+                }
+            }).addTo(map);
+        }
+
+        // Toggle heatmap visibility
+        function toggleHeatmap() {
+            if (heatmapLayer) {
+                if (map.hasLayer(heatmapLayer)) {
+                    map.removeLayer(heatmapLayer);
+                } else {
+                    map.addLayer(heatmapLayer);
+                }
+            } else {
+                updateHeatmap();
+            }
+        }
+
+        // Initialize map on page load
+        initMap();
+    </script>
+</body>
+</html>
+
+
+<!-- <script>
+    let map;
+    let sourceMarker;
+    let destMarker;
+    let routeLayers = [];
+    let selectedPoint = null;
+    let heatmapLayer;
+    
+    const weatherApiKey = '97d52917baf88b6b5a75733c14d21996';
+    let source = { lat: 19.0760, lng: 72.8777 }; // Default to Mumbai coordinates
+    let destination = { lat: 19.0760, lng: 72.8777 };
+
+    // Initialize the map
+    function initMap() {
+        map = L.map('map').setView([19.0760, 72.8777], 11); // Mumbai coordinates
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        sourceMarker = L.marker([source.lat, source.lng])
+            .bindPopup('Source')
+            .addTo(map);
+
+        destMarker = L.marker([destination.lat, destination.lng])
+            .bindPopup('Destination')
+            .addTo(map);
+
+        map.on('click', handleMapClick);
+    }
+
+    // Geocode an address to get coordinates
+    async function geocodeAddress(address) {
+        try {
+            const response = await fetch(
+                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`
+            );
+            const data = await response.json();
+            if (data.length > 0) {
+                return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+            }
+            throw new Error('Location not found');
+        } catch (err) {
+            showError('Failed to geocode address');
+            return null;
+        }
+    }
+
+    // Handle source address submission
+    async function handleSourceSubmit() {
+        const address = document.getElementById('sourceInput').value;
+        const location = await geocodeAddress(address);
+        if (location) {
+            source = location;
+            sourceMarker.setLatLng([location.lat, location.lng]);
+            map.setView([location.lat, location.lng]);
+        }
+    }
+
+    // Handle destination address submission
+    async function handleDestSubmit() {
+        const address = document.getElementById('destInput').value;
+        const location = await geocodeAddress(address);
+        if (location) {
+            destination = location;
+            destMarker.setLatLng([location.lat, location.lng]);
+            map.setView([location.lat, location.lng]);
+        }
+    }
+
+    // Set selected point (source or destination)
+    function setSelectedPoint(point) {
+        selectedPoint = point;
+        document.getElementById('selectSource').classList.toggle('selected', point === 'source');
+        document.getElementById('selectDest').classList.toggle('selected', point === 'destination');
+    }
+
+    // Handle map click to set source or destination
+    function handleMapClick(e) {
+        if (selectedPoint === 'source') {
+            source = e.latlng;
+            sourceMarker.setLatLng(e.latlng);
+        } else if (selectedPoint === 'destination') {
+            destination = e.latlng;
+            destMarker.setLatLng(e.latlng);
+        }
+    }
+
+    // Calculate risk factor based on weather and route
+    function calculateRiskFactor(weather, route) {
+        let risk = 0;
+        
+        if (weather.weather[0].main === 'Rain') risk += 30;
+        if (weather.weather[0].main === 'Snow') risk += 50;
+        if (weather.weather[0].main === 'Fog') risk += 20;
+        
+        risk += (route.distance / 1000) * 0.1;
+        
+        return risk;
+    }
+
+    // Show error message
+    function showError(message) {
+        const errorDiv = document.getElementById('error');
+        errorDiv.textContent = message;
+        errorDiv.style.display = 'block';
+        setTimeout(() => {
+            errorDiv.style.display = 'none';
+        }, 3000);
+    }
+
+    // Fetch and display routes
+    async function getRoutes() {
+        try {
+            // Clear existing routes
+            routeLayers.forEach(layer => map.removeLayer(layer));
+            routeLayers = [];
+            document.getElementById('routesInfo').innerHTML = '<h3>Route Information:</h3>';
+
+            // Get weather data
+            const weatherResponse = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${source.lat}&lon=${source.lng}&appid=${weatherApiKey}`
+            );
+            const weatherData = await weatherResponse.json();
+
+            // Get routes
+            const response = await fetch(
+                `https://router.project-osrm.org/route/v1/driving/${source.lng},${source.lat};${destination.lng},${destination.lat}?alternatives=true&geometries=geojson`
+            );
+            const data = await response.json();
+
+            if (data.routes) {
+                const routesWithRisk = data.routes.map((route, index) => {
+                    const riskFactor = calculateRiskFactor(weatherData, route);
+                    
+                    // Create route layer
+                    const coordinates = route.geometry.coordinates.map(coord => [coord[1], coord[0]]);
+                    const color = index === 0 ? '#22c55e' : '#ef4444';
+                    
+                    const routeLayer = L.polyline(coordinates, {
+                        color: color,
+                        weight: 4
+                    }).addTo(map);
+
+                    routeLayer.bindPopup(`
+                        Distance: ${(route.distance / 1000).toFixed(2)} km<br>
+                        Duration: ${Math.round(route.duration / 60)} minutes<br>
+                        Risk Score: ${riskFactor.toFixed(2)}
+                    `);
+
+                    routeLayers.push(routeLayer);
+                    
+                    return {
+                        path: coordinates,
+                        risk: riskFactor,
+                        distance: route.distance,
+                        duration: route.duration
+                    };
+                });
+
+                // Sort routes by risk and update UI
+                routesWithRisk.sort((a, b) => a.risk - b.risk);
+                
+                const routesInfo = document.getElementById('routesInfo');
+                routesWithRisk.forEach((route, index) => {
+                    const routeCard = document.createElement('div');
+                    routeCard.className = `route-card ${index === 0 ? 'best' : 'alternative'}`;
+                    routeCard.innerHTML = `
+                        Route ${index + 1}:<br>
+                        Distance: ${(route.distance / 1000).toFixed(2)} km<br>
+                        Duration: ${Math.round(route.duration / 60)} minutes<br>
+                        Risk Score: ${route.risk.toFixed(2)}
+                    `;
+                    routesInfo.appendChild(routeCard);
+                });
+            }
+        } catch (err) {
+            showError('Failed to fetch routes');
+        }
+    }
+
+    // Load crime data from CSV
+    async function loadCrimeData() {
+        try {
+            const response = await fetch('mumbai_crime.csv');
+            const csvData = await response.text();
+            
+            return new Promise(resolve => {
+                Papa.parse(csvData, {
+                    header: true,
+                    dynamicTyping: true,
+                    complete: function(results) {
+                        const heatmapData = results.data
+                            .filter(row => row.Latitude && row.Longitude)
+                            .map(row => {
+                                const intensity = (row['Severity Value'] * row.Frequency) / 100;
+                                return [
+                                    row.Latitude,
+                                    row.Longitude,
+                                    intensity
+                                ];
+                            });
+                        resolve(heatmapData);
+                    }
+                });
+            });
+        } catch (err) {
+            console.error('Error loading crime data:', err);
+            showError('Failed to load crime data');
+            return [];
+        }
+    }
+
+    // Update heatmap with crime data
+    async function updateHeatmap() {
+        if (heatmapLayer) {
+            map.removeLayer(heatmapLayer);
+        }
+
+        const crimeData = await loadCrimeData();
+        heatmapLayer = L.heatLayer(crimeData, {
+            radius: 25,
+            blur: 15,
+            maxZoom: 15,
+            gradient: {
+                0.4: 'blue',
+                0.6: 'yellow',
+                0.8: 'orange',
+                1.0: 'red'
+            }
+        }).addTo(map);
+    }
+
+    // Toggle heatmap visibility
+    function toggleHeatmap() {
+        if (heatmapLayer) {
+            if (map.hasLayer(heatmapLayer)) {
+                map.removeLayer(heatmapLayer);
+            } else {
+                map.addLayer(heatmapLayer);
+            }
+        } else {
+            updateHeatmap();
+        }
+    }
+
+    // Initialize map on page load
+    initMap();
+</script> -->
